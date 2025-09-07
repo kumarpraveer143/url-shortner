@@ -33,12 +33,12 @@ This project demonstrates how to design and implement a URL shortener that can h
 
 ## ⚙️ Tech Stack  
 
-- **Backend**: Node.js / Express (or Flask/Django if Python-based)  
-- **Database**: MySQL / PostgreSQL with **Sharding Strategy**  
+- **Backend**: Node.js / Express
+- **Database**: MongoDB
 - **Cache**: Redis  
 - **Messaging**: Apache Kafka  
-- **Containerization**: Docker (optional)  
-- **Monitoring**: Prometheus + Grafana (extendable)  
+- **Containerization**: Docker 
+- **Monitoring**: Prometheus + Grafana
 
 ---
 
