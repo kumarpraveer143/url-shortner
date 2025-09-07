@@ -18,7 +18,7 @@ const Navbar = () => {
                     <div className="flex-shrink-0 flex items-center">
                         <div className="text-2xl font-bold text-blue-600 cursor-pointer">
                             <Link to="/">
-                                URL Shortner
+                                URL Shortener
                             </Link>
                         </div>
                     </div>
@@ -32,6 +32,23 @@ const Navbar = () => {
                         >
                             About
                         </Link>
+
+                        {/* Authenticated User Links */}
+                        <SignedIn>
+                            <Link
+                                to="/createlink"
+                                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                            >
+                                Create Link
+                            </Link>
+                            <Link
+                                to="/dashboard"
+                                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                            >
+                                Dashboard
+                            </Link>
+                        </SignedIn>
+
                         {/* Authentication Buttons */}
                         <div className="flex items-center">
                             <SignedOut>
@@ -69,18 +86,36 @@ const Navbar = () => {
 
                 {/* Mobile Navigation Menu */}
                 <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen
-                    ? 'max-h-64 opacity-100'
+                    ? 'max-h-96 opacity-100'
                     : 'max-h-0 opacity-0 overflow-hidden'
                     }`}>
                     <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-50 rounded-lg mt-2">
                         {/* About Link - Mobile */}
-                        <a
-                            href="#about"
+                        <Link
+                            to="/about"
                             className="block text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 text-base font-medium rounded-md transition-colors duration-200"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             About
-                        </a>
+                        </Link>
+
+                        {/* Authenticated User Links - Mobile */}
+                        <SignedIn>
+                            <Link
+                                to="/create-link"
+                                className="block text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 text-base font-medium rounded-md transition-colors duration-200"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Create Link
+                            </Link>
+                            <Link
+                                to="/dashboard"
+                                className="block text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 text-base font-medium rounded-md transition-colors duration-200"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Dashboard
+                            </Link>
+                        </SignedIn>
 
                         {/* Authentication - Mobile */}
                         <div className="px-3 py-2">
