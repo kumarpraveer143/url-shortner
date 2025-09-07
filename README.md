@@ -19,7 +19,8 @@ This project demonstrates how to design and implement a URL shortener that can h
 ---
 
 ## 🏛 Architecture Overview  
-![Uploading url_shortener_architecture.png…]()
+<img width="825" height="466" alt="url_shortener_architecture" src="https://github.com/user-attachments/assets/e176ea82-cff7-44dc-8591-3d8431a7ec11" />
+
 
 
 - **API Layer**: Handles requests to shorten or resolve URLs.  
